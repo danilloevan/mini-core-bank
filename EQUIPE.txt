@@ -1,0 +1,46 @@
+==================================================================================
+UNIVERSIDADE FEDERAL DO CEARÁ (UFC) — INSTITUTO UFC VIRTUAL (IUVI)
+DISCIPLINA: SMD0017 - PROGRAMAÇÃO ORIENTADA A OBJETOS
+PROFESSOR: GILVAN MAIA
+TRABALHO FINAL: MINI CORE BANK (SISTEMA BANCÁRIO EM JAVA 21 + SPRING BOOT 3)
+==================================================================================
+
+1. COMPONENTES DA EQUIPE
+----------------------------------------------------------------------------------
+Integrante 1:
+- Nome Completo: DANILLO EVANGELISTA CABRAL
+- Matrícula: 387967
+- Papel na Equipe: Responsável por implementar o projeto em Spring (modelagem
+  orientada a objetos, regras de negócio, persistência JPA/Flyway e API REST).
+
+Integrante 2:
+- Nome Completo: RAFAEL CALISTO OLIVEIRA DA SILVA
+- Matrícula: 606478
+- Papel na Equipe: Responsável por testar a aplicação e implementar o diagrama
+  UML (testes automatizados, validação dos endpoints e documentação UML).
+
+
+2. MAPEAMENTO DE IMPLEMENTAÇÃO (QUEM IMPLEMENTOU O QUÊ)
+----------------------------------------------------------------------------------
+* DANILLO EVANGELISTA CABRAL (Matrícula: 387967):
+  - Implementação do projeto em Spring Boot 3 (Java 21):
+    * Hierarquias de domínio POO: Cliente (PessoaFisica, PessoaJuridica, Endereco),
+      Conta (ContaCorrente, ContaEmpresarial, Agencia, ChavePix) e Transacao
+      (TransacaoDeposito, TransacaoSaque, TransacaoPix, TransacaoTed, ComprovanteTransacao).
+    * Interfaces e Polimorfismo: CalculadoraTarifa (TarifaIsenta, TarifaFixa,
+      TarifaPercentual) e ExportadorExtrato (ExportadorExtratoTexto, ExportadorExtratoCsv).
+    * Camadas Spring: Repositories (Spring Data JPA), Services (ClienteService,
+      ContaService, TransacaoService), Controllers REST + Swagger/OpenAPI e
+      tratamento global de exceções (NegocioException, SaldoInsuficienteException,
+      GlobalExceptionHandler).
+    * Banco de dados e infraestrutura: Docker Compose (PostgreSQL 16) e
+      migrations Flyway (V1__criar_tabelas.sql e V2__popular_dados_iniciais.sql).
+
+* RAFAEL CALISTO OLIVEIRA DA SILVA (Matrícula: 606478):
+  - Testes e Diagrama de Classes UML:
+    * Testes unitários das regras e pilares de POO (DominioPooTest) e testes de
+      integração ponta a ponta com Flyway e banco em memória (BancoIntegrationTest).
+    * Validação prática dos fluxos da API via Swagger UI / Postman.
+    * Implementação e documentação do Diagrama de Classes UML representando o
+      código-fonte entregue (docs/diagrama-classes.svg), além do apoio no
+      Manual de Execução (MANUAL_EXECUCAO.md).

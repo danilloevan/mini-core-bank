@@ -1,0 +1,26 @@
+# Compilados Java / Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+.factorypath
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Formatos alternativos do diagrama (mantendo apenas docs/diagrama-classes.svg)
+docs/diagrama-classes.png
+docs/diagrama-classes.puml
+docs/DIAGRAMA_CLASSES.md
+
